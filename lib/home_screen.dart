@@ -71,6 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   void setTime(int seconds) {
     setState(() {
+      isrunning = false;
       timer.cancel();
       totalSeconds = seconds;
     });
@@ -214,7 +215,7 @@ class _ListViewWidgetState extends State<ListViewWidget> {
     {"15:00": 900},
     {"20:00": 1200},
     {"25:00": 1500},
-  ];
+  ]; // List Map타입
 
   @override
   Widget build(BuildContext context) {
@@ -253,6 +254,3 @@ class _ListViewWidgetState extends State<ListViewWidget> {
     );
   }
 }
-
-
-//List<String> setTime = ['5:00', '10:00', '15:00', '20:00', '25:00'];
